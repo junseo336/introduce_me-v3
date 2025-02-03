@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <title>자기소개 페이지</title>
+</head>
+<body>
+
+<!-- 메인 컨테이너 -->
+<div class="container">
+  
+  <!-- 상단 네비게이션 -->
+  <div class="tab">
+    <button class="tablinks active" onclick="openTab(event, 'intro')">자기소개</button>
+    <button class="tablinks" onclick="openTab(event, 'info')">정보 및 취미</button>
+    <button class="tablinks" onclick="openTab(event, 'share')">공유</button>
+    <button class="tablinks" onclick="openTab(event, 'plan')">계획</button>
+    <button class="tablinks" onclick="openTab(event, 'etc')">기타</button>
+  </div>
+
+  <!-- 중간 내용 -->
+  <div class="content">
+    
+    <!-- 자기소개 탭 -->
+    <div id="intro" class="tabcontent active">
+      
+      <!-- 사진과 글 -->
+      <div class="intro-container">
+        <div class="photo-container">
+          <img src="myphoto.jpg" alt="프로필 사진">
+          <h3>김준서</h3>
+        </div>
+        <p> 안녕하세요! 김준서입니다! <br>
+
+            프론트엔드에 관심이 있지만 제대로 배워보지 못하여<br>
+            
+            이번 유레카 교육과정을 통해 열심히 배우고 싶습니다!<br>
+            
+            많은 조언과 도움을 주신다면 감사하겠습니다!</p>
+      </div>
+    </div>
+
+    <!-- 정보 및 취미 탭 -->
+    <div id="info" class="tabcontent">
+        <div class="info-grid">
+          <div class="info-item" data-text="항공소프트웨어공학과">
+            <i class="fas fa-graduation-cap"></i>
+            <p>전공</p>
+          </div>
+          <div class="info-item" data-text="INFJ">
+            <i class="fas fa-user"></i>
+            <p>MBTI</p>
+          </div>
+          <div class="info-item" data-text="게임(롤, 메이플)">
+            <i class="fas fa-gamepad"></i>
+            <p>취미</p>
+          </div>
+          <div class="info-item" data-text="일본여행, 유레카 합격">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <p>좋았던 경험</p>
+          </div>
+        </div>
+    </div>
+      
+      
+    <!-- 공유 탭 -->
+    <div id="share" class="tabcontent">
+        <div class="sharecontainer">
+            <div class ="share-photo">
+             <img src="photo1.jpg">
+             <p>하코네 온천여행</p>
+            </div> 
+
+            <div class ="share-photo">
+             <img src="photo2.jpg">
+             <p>말고기 사시미</p>
+            </div> 
+        </div>
+    </div>
+
+    <!-- 계획 탭 -->
+    <div id="plan" class="tabcontent">
+      <div class="plancontainer">
+        <p> 1. 매일 30분씩 유산소 운동하기 </p>
+        <p> 2. 강의내용 따라갈 수 있도록 열심히 공부하기 </p>
+        <p> 3. 유레카 과정 무사히 수료하기 </p>
+    </div>
+  </div>
+
+    <!-- 기타 탭 -->
+    <div id="etc" class="tabcontent">
+      <div class="emoji-container">
+        <div id="emoji-display">😊</div>
+        <p id="counter">클릭 횟수: 0</p>
+        <h3> 이모티콘을 클릭해보세요!</h3>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 하단 시간 -->
+  <div id="footer"></div>
+
+</div>
+</body>
+<script src="script.js"></script>
+</html>
